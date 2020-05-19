@@ -1,5 +1,6 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanObsoleteChunks = require('webpack-clean-obsolete-chunks');
 
 const path = require("path");
 const fs = require("fs");
