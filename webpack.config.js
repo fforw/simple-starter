@@ -61,8 +61,8 @@ module.exports = {
             "__DEV": !PRODUCTION,
             "__STATS": STATS,
             "process.env.NODE_ENV": JSON.stringify(PRODUCTION ? "production" : "development")
-        })
-
+        }),
+        new CleanObsoleteChunks()
     ],
 
     module: {
