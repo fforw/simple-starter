@@ -1,4 +1,6 @@
-var assert = require("power-assert");
+import { describe, it } from "mocha";
+import assert from "power-assert";
+
 
 describe("Testing", function(){
 	it("Mocha is integrated", function()
@@ -7,16 +9,19 @@ describe("Testing", function(){
 	});
 	it("Power Assert works", function()
 	{
-        var foo = "abc";
-        var bar = 123;
+        const foo = "abc";
+        const bar = 123;
 
         try
         {
-            assert(foo == bar);
+            assert(foo === bar);
         }
         catch(e)
         {
             assert(/"abc"/.test(e));
+
+            console.log("DEMO ERROR:", e);
+
             return
         }
 		assert(false);
