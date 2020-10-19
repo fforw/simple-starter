@@ -24,6 +24,7 @@
         "babel-loader": "^8.1.0",
         "babel-plugin-espower": "^3.0.1",
         "babel-plugin-transform-imports": "^2.0.0",
+        "copy-webpack-plugin": "^6.2.1",
         "cross-env": "^7.0.2",
         "css-loader": "^4.3.0",
         "glslify-hex": "^2.1.1",
