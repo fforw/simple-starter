@@ -1,6 +1,5 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanObsoleteChunks = require('webpack-clean-obsolete-chunks');
 const CopyPlugin = require("copy-webpack-plugin");
 
 const path = require("path");
@@ -34,6 +33,8 @@ module.exports = (env,argv) => {
                 path: JS_OUTPUT_DIRECTORY,
                 filename: "bundle-[name]-[chunkhash].js",
                 chunkFilename: "bundle-[name]-[chunkhash].js",
+
+                clean: true,
 
                 library: "Demo",
                 libraryTarget: "var"
@@ -73,9 +74,7 @@ module.exports = (env,argv) => {
                             }
                         ]
                     }
-                ),
-
-                new CleanObsoleteChunks()
+                )
             ],
 
             module: {
