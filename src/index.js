@@ -11,7 +11,11 @@ const config = {
     height: 0
 };
 
-let ctx, canvas;
+/**
+ * @type CanvasRenderingContext2D
+ */
+let ctx;
+let canvas;
 
 domready(
     () => {
