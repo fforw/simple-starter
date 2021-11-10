@@ -1,6 +1,5 @@
 import domready from "domready"
-// noinspection ES6UnusedImports
-import STYLE from "./style.css"
+import "./style.css"
 
 const PHI = (1 + Math.sqrt(5)) / 2;
 const TAU = Math.PI * 2;
