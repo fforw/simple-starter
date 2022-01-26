@@ -31,7 +31,15 @@ domready(
         canvas.width = width;
         canvas.height = height;
 
-        ctx.fillStyle = "#000";
-        ctx.fillRect(0,0, width, height);
+        const paint = () => {
+
+            ctx.fillStyle = "#000";
+            ctx.fillRect(0,0, width, height);
+
+        }
+
+        paint()
+
+        canvas.addEventListener("click", paint, true)
     }
 );
