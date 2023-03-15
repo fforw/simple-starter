@@ -32,7 +32,7 @@
         "mocha": "^10.0.0",
         "power-assert": "^1.6.1",
         "shelljs": "^0.8.5",
-        "webpack": "^5.73.0",
+        "webpack": "^5.76.0",
         "webpack-cli": "^4.10.0"
     },
     "scripts": {
