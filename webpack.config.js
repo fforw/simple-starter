@@ -23,7 +23,7 @@ module.exports = (env,argv) => {
 
             mode: process.env.NODE_ENV,
             entry: {
-                "main": "./src/index.js",
+                "main": "./src/index.tsx",
                 "test": "./src/test.js"
             },
 
@@ -81,7 +81,7 @@ module.exports = (env,argv) => {
                 rules: [
                     // babel transpilation ( see .babelrc for babel config)
                     {
-                        test: /\.js$/,
+                        test: /\.(js|tsx?)$/,
                         exclude: /node_modules/,
                         use: {
                             loader: "babel-loader"
