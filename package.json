@@ -4,7 +4,6 @@
     "author": "Sven Helmberger",
     "license": "Apache-2.0",
     "dependencies": {
-        "performance-now": "^2.1.0",
         "simplex-noise": "^4.0.3"
     },
     "devDependencies": {
