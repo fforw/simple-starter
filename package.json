@@ -18,9 +18,7 @@
         "@babel/plugin-syntax-dynamic-import": "^7.8.3",
         "@babel/preset-env": "^7.29.5",
         "@babel/preset-react": "^7.28.5",
-        "@babel/register": "^7.29.3",
         "babel-loader": "^10.1.1",
-        "babel-plugin-espower": "^3.0.1",
         "babel-plugin-transform-imports": "^2.0.0",
         "copy-webpack-plugin": "^14.0.0",
         "core-js": "^3.49.0",
@@ -31,9 +29,8 @@
         "html-webpack-plugin": "^5.6.7",
         "loader-utils": "^3.3.1",
         "mini-css-extract-plugin": "^2.10.2",
-        "mocha": "^11.7.5",
-        "power-assert": "^1.6.1",
         "shelljs": "^0.10.0",
+        "vitest": "^5.0.4",
         "webpack": "^5.106.2",
         "webpack-cli": "^7.0.2"
     },
@@ -41,7 +38,8 @@
         "build": "node tooling/clean.js ; webpack --mode=production",
         "build-dev": "node tooling/clean.js ; cross-env NODE_ENV=development webpack --mode=development",
         "watch": "node tooling/clean.js ; node --trace-deprecation ./node_modules/.bin/webpack --mode=development -w",
-        "test": "cross-env NODE_ENV=development BABEL_ENV=test mocha --require @babel/register -R spec test/"
+        "test": "vitest run",
+        "test:watch": "vitest"
     },
     "browserslist": [
         "> 0.5%",
