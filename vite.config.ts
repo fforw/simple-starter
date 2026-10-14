@@ -1,6 +1,9 @@
 import { resolve } from "node:path"
-import { defineConfig } from "vite"
+import { powerAssert } from "rollup-plugin-power-assert"
+import { defineConfig } from "vitest/config"
 import glsl from "vite-plugin-glsl"
+
+const TEST_PATTERN = "test/**/*.{js,ts}"
 
 export default defineConfig(({ mode }) => {
     const PRODUCTION = mode === "production"
@@ -10,13 +13,19 @@ export default defineConfig(({ mode }) => {
 
         plugins: [
             // import .glsl/.frag/.vert files as strings, with #include support
-            glsl({ minify: PRODUCTION })
+            glsl({ minify: PRODUCTION }),
+            // descriptive power-assert messages for assert() in tests
+            powerAssert({ include: TEST_PATTERN })
         ],
 
         define: {
             __PROD: JSON.stringify(PRODUCTION),
             __DEV: JSON.stringify(!PRODUCTION),
             __STATS: JSON.stringify(!!process.env.STATS)
+        },
+
+        test: {
+            include: [TEST_PATTERN]
         },
 
         build: {

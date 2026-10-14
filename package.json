@@ -7,7 +7,9 @@
         "simplex-noise": "^4.0.3"
     },
     "devDependencies": {
+        "@power-assert/runtime": "^0.3.2",
         "@types/node": "^26.6.5",
+        "rollup-plugin-power-assert": "^0.2.2",
         "typescript": "^7.0.2",
         "vite": "^8.3.4",
         "vite-plugin-glsl": "^1.6.2",

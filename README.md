@@ -16,7 +16,7 @@ using [Vite](https://vite.dev) and [pnpm](https://pnpm.io).
 * `index.html` / `test.html` -- page entry points
 * `src/` -- TypeScript sources and CSS
 * `public/media/` -- copied verbatim to `docs/media/`
-* `test/` -- vitest tests (`*.test.ts`)
+* `test/` -- vitest tests (`*.js`/`*.ts`), `assert()` gives power-assert output
 
 GLSL files (`.glsl`, `.vert`, `.frag`) can be imported as strings
 via vite-plugin-glsl, including `#include` support.
